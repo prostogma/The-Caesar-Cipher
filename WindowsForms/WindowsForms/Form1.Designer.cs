@@ -37,6 +37,8 @@
             this.buttonLaunch = new System.Windows.Forms.Button();
             this.textBoxOutput = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.buttonLoadFromFile = new System.Windows.Forms.Button();
+            this.buttonSaveToFile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShift)).BeginInit();
             this.SuspendLayout();
             // 
@@ -116,7 +118,7 @@
             // 
             // buttonLaunch
             // 
-            this.buttonLaunch.Location = new System.Drawing.Point(487, 376);
+            this.buttonLaunch.Location = new System.Drawing.Point(562, 379);
             this.buttonLaunch.Name = "buttonLaunch";
             this.buttonLaunch.Size = new System.Drawing.Size(120, 27);
             this.buttonLaunch.TabIndex = 6;
@@ -143,6 +145,26 @@
             this.label3.TabIndex = 8;
             this.label3.Text = "Шифровать/Дешифровать";
             // 
+            // buttonLoadFromFile
+            // 
+            this.buttonLoadFromFile.Location = new System.Drawing.Point(418, 379);
+            this.buttonLoadFromFile.Name = "buttonLoadFromFile";
+            this.buttonLoadFromFile.Size = new System.Drawing.Size(120, 27);
+            this.buttonLoadFromFile.TabIndex = 9;
+            this.buttonLoadFromFile.Text = "Загрузить из файла";
+            this.buttonLoadFromFile.UseVisualStyleBackColor = true;
+            this.buttonLoadFromFile.Click += new System.EventHandler(this.buttonLoadFromFile_Click);
+            // 
+            // buttonSaveToFile
+            // 
+            this.buttonSaveToFile.Location = new System.Drawing.Point(702, 379);
+            this.buttonSaveToFile.Name = "buttonSaveToFile";
+            this.buttonSaveToFile.Size = new System.Drawing.Size(120, 27);
+            this.buttonSaveToFile.TabIndex = 10;
+            this.buttonSaveToFile.Text = "Сохранить в файл";
+            this.buttonSaveToFile.UseVisualStyleBackColor = true;
+            this.buttonSaveToFile.Click += new System.EventHandler(this.buttonSaveToFile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -157,6 +179,8 @@
             this.Controls.Add(this.numericUpDownShift);
             this.Controls.Add(this.LanguageChoice);
             this.Controls.Add(this.textBoxInput);
+            this.Controls.Add(this.buttonLoadFromFile);
+            this.Controls.Add(this.buttonSaveToFile);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownShift)).EndInit();
@@ -176,6 +200,8 @@
         private System.Windows.Forms.Button buttonLaunch;
         private System.Windows.Forms.TextBox textBoxOutput;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button buttonLoadFromFile;
+        private System.Windows.Forms.Button buttonSaveToFile;
     }
 }
 

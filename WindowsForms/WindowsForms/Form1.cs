@@ -122,5 +122,32 @@ namespace WindowsForms
 
             return new string(result);
         }
+
+        private void buttonLoadFromFile_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            {
+                openFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (openFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = openFileDialog.FileName;
+                    string text = System.IO.File.ReadAllText(filePath);
+                    textBoxInput.Text = text;
+                }
+            }
+        }
+
+        private void buttonSaveToFile_Click(object sender, EventArgs e)
+        {
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog())
+            {
+                saveFileDialog.Filter = "Text files (*.txt)|*.txt|All files (*.*)|*.*";
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
+                {
+                    string filePath = saveFileDialog.FileName;
+                    System.IO.File.WriteAllText(filePath, textBoxOutput.Text);
+                }
+            }
+        }
     }
 }
